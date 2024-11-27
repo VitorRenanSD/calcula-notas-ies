@@ -35,14 +35,14 @@ public class Calculo {
         Double media = calcularMedia(materia);
 
         if (passouDireto(materia)) {
-            return "Aluno aprovado em " + materia.getNome() + ". Média: " + media;
+            return "Aprovado em " + materia.getNome() + ". Média: " + media;
         } else if (materia.getExame() == 0.0f) {
-            return "Aluno em recuperação de " + materia.getNome() + ". Necessário realizar/preencher exame.";
+            return "Recuperação de " + materia.getNome() + ". Necessário realizar prova de exame.";
         } else if (passouNoExame(materia)) {
             double mediaFinal = (media + materia.getExame()) / 2.0;
-            return "Aluno aprovado em " + materia.getNome() + " no exame. Média final: " + mediaFinal;
+            return "Aprovado em " + materia.getNome() + " no exame. Média final: " + mediaFinal;
         } else {
-            return "Aluno reprovado em " + materia.getNome() + " mesmo após exame.";
+            return "Reprovado em " + materia.getNome() + " mesmo após exame.";
         }
     }
 }
