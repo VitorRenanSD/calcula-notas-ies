@@ -10,7 +10,6 @@ public class Materia {
         if (nome == null || nome.trim().isEmpty()) {
             throw new IllegalArgumentException("Nome nao pode ser nulo");
         }
-
         this.nome = nome;
         this.np1 = np1;
         this.np2 = np2;
