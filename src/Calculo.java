@@ -24,7 +24,7 @@ public class Calculo {
     // Metodo que verifica se o aluno passou com exame
     public boolean passouNoExame(Materia materia) {
         if (materia.getExame() == 0.0f) {
-            throw new IllegalArgumentException("Não passou de forma direta, nota de exame faltando");
+            throw new IllegalArgumentException("Não passou de forma direta em " + materia.getNome() + ", nota de exame faltando no cadastro");
         }
         double mediaComExame = (calcularMedia(materia) + materia.getExame()) / 2.0;
         return mediaComExame >= this.notaMinExame;
